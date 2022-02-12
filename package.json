@@ -2,7 +2,7 @@
   "name": "kanister",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon src/app.js",
+    "dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
     "start": "node src/app.js"
   },
   "repository": "https://github.com/kanisterdev/kanister",
@@ -10,11 +10,20 @@
   "license": "GPL-3.0-or-later",
   "private": false,
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@types/dockerode": "^3.3.3",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.17",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "dockerode": "^3.3.1",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "helmet": "^5.0.2",
     "morgan": "^1.10.0"
   }
 }
